@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Form</title>
+    <script script type="text/css" src="style.css"></script>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Ghost Form Demo</h1>
+    </div>
+    <div align="center">
+        <h2>Newsletter signup</h2>
+        <form name="newsletter_signup"  action="" id="newsletter_signup" enctype="multipart/form-data">
+            <label for="first_name">First name:
+                <input type="text" name="first_name" id="first_name" value="">
+                <br />
+                <label for="last_name">Last name:
+                    <input type="text" name="last_name" id="last_name" value="">
+                    <br />
+                    <label for="email">Email:
+                        <input type="email" name="email" id="email" value="">
+                        <br />
+                        <input type="checkbox" name="newsletter" onclick="javascript:copyFormValueToGhostForm('newsletter_signup', 'hidden_newsletter_signup', 'first_name', 'first_name');copyFormValueToGhostForm('newsletter_signup', 'hidden_newsletter_signup', 'last_name', 'last_name');copyFormValueToGhostForm('newsletter_signup', 'hidden_newsletter_signup', 'email', 'email');">
+                        <em>Check this box if you would like to sign up for the newsletter.</em>
+                        <p><input id="submit" type="submit" name="submit" value="Submit"></p>
+        </form>
+        <a id="hide-ghost-form" onclick="toggleGhostForm()">click to toggle ghost form</a>
+        <div id="ghost-form-container" class="ghost-form-container">
+            <h2>Ghost Form</h2>
+            <form method="post" action="submit.php" id="ghost_form" name="hidden_newsletter_signup" enctype="multipart/form-data">
+                <label for="first_name">First name:
+                    <input type="text" id="ghost_first_name" name="first_name" value="">
+                    <br />
+                    <label for="last_name">Last name:
+                        <input type="text" id="ghost_last_name" name="last_name" id="hidden_last_name" value="">
+                        <br />
+                        <label for="email">Email:
+                            <input type="email" id="ghost_email" name="email" id="hidden_email" value="">
+                            <br />
+                            <input type="hidden" id="ghost_lists" name="lists" value="13">
+                            <br />
+                            <p><input id="ghost_submit" type="submit" name="ghost_submit" value="Submit"></p>
+            </form>
+        </div>
+    </div>
+
+     <div id="msg">
+            <pre></pre>
+    </div>
+
+
+
+<script script type="text/javascript" src="custom.js"></script>
+</body>
+
+</html>
