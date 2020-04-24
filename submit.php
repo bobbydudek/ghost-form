@@ -12,9 +12,9 @@ $stuff = $form->data;
 
 
 	//set POST variables
-	$url = 'http://agencytourismmarketing.tourism-engine.com/';
-	//$url = 'http://www.zogzogzogzogzog.com/zog';
-	$url_backup = 'http://agencytourismmarketing.tourism-engine2.com/form-actions/';
+	//$url = 'http://subdomain.domain.com/';
+	
+	//$url_backup = 'http://subdomain.domain.com/form-actions/';
 	$fields = array(
 		'option'=>urlencode('com_chronoforms'),
 		'chronoform'=>urlencode('AGENCY'),
